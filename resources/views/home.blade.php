@@ -20,7 +20,15 @@
         @endcomponent
 
         @component('components.slider')
-            
+            @slot('title')
+                Panele fotowoltaniczne <b>w najlepszej cenie</b>
+            @endslot
+            @slot('text')
+                darmowy montaż
+            @endslot
+            @slot('image')
+                {{ asset('images/panel.png')}}
+            @endslot
         @endcomponent
 
         <script src="{{ asset('js/app.js')}}"></script>

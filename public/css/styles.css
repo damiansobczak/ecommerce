@@ -426,9 +426,17 @@ html {
 
 .slider {
   height: 800px;
+  padding: 30px;
   background-color: #F8F8F8;
   position: relative;
   color: #fff;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1024px) {
+  .slider {
+    height: 600px;
+  }
 }
 
 .slider__background {
@@ -440,6 +448,12 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .slider__background {
+    width: 100%;
+  }
 }
 
 .slider__container {
@@ -460,6 +474,12 @@ html {
   margin-bottom: 24px;
 }
 
+@media (max-width: 1024px) {
+  .slider__title {
+    font-size: 2rem;
+  }
+}
+
 .slider__title b {
   font-weight: 600;
 }
@@ -475,5 +495,11 @@ html {
   top: 50%;
   transform: translateY(-50%);
   z-index: -1;
+}
+
+@media (max-width: 1024px) {
+  .slider__image {
+    display: none;
+  }
 }
 

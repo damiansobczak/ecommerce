@@ -8,9 +8,15 @@
 
 .slider {
     height: 800px;
+    padding: 30px;
     background-color: $color-bg;
     position: relative;
     color: #fff;
+    overflow-x: hidden;
+
+    @include breakpoint-down(lg) {
+        height: 600px;
+    }
 
     &__background {
         position: absolute;
@@ -20,6 +26,10 @@
         width: 60vw;
         object-fit: cover;
         z-index: 1;
+
+        @include breakpoint-down(lg) {
+            width: 100%;
+        }
     }
 
     &__container {
@@ -39,6 +49,10 @@
         font-weight: 200;
         margin-bottom: 24px;
 
+        @include breakpoint-down(lg) {
+            font-size: 2rem;
+        }
+
         b {
             font-weight: 600;
         }
@@ -55,5 +69,9 @@
         top: 50%;
         transform: translateY(-50%);
         z-index: -1;
+
+        @include breakpoint-down(lg) {
+            display: none;
+        }
     }
 }
