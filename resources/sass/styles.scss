@@ -1,0 +1,20 @@
+/*
+* Utils and mixins
+*
+*/
+
+@import "./base/reset";
+@import "./base/icons";
+@import "./utils/variables";
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*
+* Components
+*
+*/
+
+@import "./components/menu";
+@import "./components/slider";

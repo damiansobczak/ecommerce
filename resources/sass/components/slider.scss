@@ -1,0 +1,59 @@
+/*
+* Main slider component
+*
+*/
+
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.slider {
+    height: 800px;
+    background-color: $color-bg;
+    position: relative;
+    color: #fff;
+
+    &__background {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 60vw;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    &__container {
+        max-width: 1280px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        font-size: 4rem;
+        max-width: 800px;
+        line-height: 1.2;
+        font-weight: 200;
+        margin-bottom: 24px;
+
+        b {
+            font-weight: 600;
+        }
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 200;
+    }
+
+    &__image {
+        position: absolute;
+        right: -120px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+}
