@@ -135,6 +135,13 @@ table {
   border-spacing: 0;
 }
 
+button {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-family: inherit;
+}
+
 /*
 * Icomoon icon set
 *
@@ -501,5 +508,136 @@ html {
   .slider__image {
     display: none;
   }
+}
+
+/*
+* Feature products on main page
+*
+*/
+
+.feature {
+  background-color: #F8F8F8;
+}
+
+.feature__container {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin: -100px auto 0;
+  position: relative;
+  z-index: 1;
+  padding: 0 30px 100px;
+}
+
+.feature__item {
+  padding-right: 30px;
+  max-width: calc(25% - 23px);
+}
+
+@media (max-width: 1024px) {
+  .feature__item {
+    max-width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 576px) {
+  .feature__item {
+    max-width: 100%;
+    padding: 0 0 30px;
+  }
+}
+
+.feature__item:last-child {
+  padding-right: 0;
+}
+
+.feature__link {
+  display: block;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.feature__link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.feature__price {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #8FC003;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 3px;
+  font-size: 13px;
+  padding: 8px 16px;
+}
+
+.feature__image {
+  max-width: 100%;
+  height: auto;
+  margin-top: -50px;
+}
+
+.feature__title {
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 8px;
+  margin-top: -16px;
+}
+
+.feature__desc {
+  color: #8B8B8B;
+  font-weight: 200;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.feature__cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #8FC003;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 56px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.feature__cart:hover {
+  opacity: 0.7;
+}
+
+.feature__more {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 10px 0;
+}
+
+.feature__more span {
+  display: block;
+  height: 2px;
+  width: 32px;
+  margin-right: 16px;
+  background-color: #000;
 }
 

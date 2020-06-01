@@ -16,7 +16,6 @@
     </head>
     <body>
         @component('components.menu')
-            
         @endcomponent
 
         @component('components.slider')
@@ -28,6 +27,24 @@
             @endslot
             @slot('image')
                 {{ asset('images/panel.png')}}
+            @endslot
+        @endcomponent
+
+        @component('components.feature')
+            @slot('price')
+                1499,99zł
+            @endslot
+            @slot('image')
+                {{ asset('images/panel.png') }}
+            @endslot
+            @slot('title')
+                SPR-MAX3-400
+            @endslot
+            @slot('desc')
+                Panele fotowoltaniczne z gwarancją na produkt 25 lat.
+            @endslot
+            @slot('link')
+                #
             @endslot
         @endcomponent
 
